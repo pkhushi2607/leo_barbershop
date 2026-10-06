@@ -1,47 +1,54 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState, useSyncExternalStore } from "react";
+import { AnimatePresence, motion } from "motion/react";
+
+const subscribe = () => () => {};
+const serverSnapshot = () => true;
+const sessionSnapshot = () => {
+    try {
+        return Boolean(sessionStorage.getItem("hasSeenIntro"));
+    } catch {
+        return false;
+    }
+};
 
 export function IntroVideo() {
     const [showIntro, setShowIntro] = useState(true);
 
-    useEffect(() => {
-        // Prevent the intro from showing again during this session
-        const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
-
-        if (hasSeenIntro) {
-            setShowIntro(false);
-        }
-    }, []);
+    const hasSeenIntro = useSyncExternalStore(subscribe, sessionSnapshot, serverSnapshot);
 
     const finishIntro = () => {
-        sessionStorage.setItem("hasSeenIntro", "true");
+        try {
+            sessionStorage.setItem("hasSeenIntro", "true");
+        } catch {
+            // The video can still be dismissed when session storage is unavailable.
+        }
         setShowIntro(false);
     };
 
     return (
         <AnimatePresence>
-            {showIntro && (
+            {showIntro && !hasSeenIntro && (
                 <motion.div
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="fixed inset-0 z-[9999] bg-black"
+                    className="intro-overlay"
                 >
                     <video
                         autoPlay
                         muted
                         playsInline
                         onEnded={finishIntro}
-                        className="h-full w-full object-fill"
+                        className="intro-video"
                     >
                         <source src="/video/intro_video.mp4" type="video/mp4" />
                     </video>
 
                     <button
                         onClick={finishIntro}
-                        className="absolute bottom-8 right-8 text-sm text-white/70 hover:text-white"
+                        className="intro-skip"
                     >
                         Skip Intro →
                     </button>
