@@ -26,14 +26,14 @@ export const services: Service[] = [
         image: "/images/services/fade_haircut.jpg",
         bookLink: "https://leosbarbershopwindsor.setmore.com/book?step=time-slot&products=7df47e73-42ec-450d-a2ae-42dd1ff977ab&type=service&staff=71a89899-07c8-438b-804e-e0ee8f1d612b&staffSelected=true",
     },
-    {
-        name: "Hair Colour",
-        description:
-            "Full hair colour service designed to refresh your look with an even, polished finish.",
-        price: "CAD $30",
-        duration: "15-20 minutes",
-        image: "/images/services/hair_color.jpg",
-    },
+    // {
+    //     name: "Hair Colour",
+    //     description:
+    //         "Full hair colour service designed to refresh your look with an even, polished finish.",
+    //     price: "CAD $30",
+    //     duration: "15-20 minutes",
+    //     image: "/images/services/hair_color.jpg",
+    // },
     {
         name: "Beard Trim & Line Up",
         description:
@@ -43,14 +43,14 @@ export const services: Service[] = [
         image: "/images/services/beard_trim.jpg",
         bookLink: "https://leosbarbershopwindsor.setmore.com/book?step=time-slot&products=42852cc7-9e9b-4726-bbab-34d20cea41b7&type=service&staff=71a89899-07c8-438b-804e-e0ee8f1d612b&staffSelected=true"
     },
-    {
-        name: "Beard Colour",
-        description:
-            "Natural-looking beard colour to refresh your appearance and complement your style.",
-        price: "CAD $15",
-        duration: "15-20 minutes",
-        image: "/images/services/beard_color.jpg",
-    },
+    // {
+    //     name: "Beard Colour",
+    //     description:
+    //         "Natural-looking beard colour to refresh your appearance and complement your style.",
+    //     price: "CAD $15",
+    //     duration: "15-20 minutes",
+    //     image: "/images/services/beard_color.jpg",
+    // },
     {
         name: "Wax",
         description:
@@ -84,14 +84,14 @@ export const services: Service[] = [
         duration: "15-20 minutes",
         image: "/images/services/facial.jpg",
     },
-    {
-        name: "Shampoo",
-        description:
-            "A refreshing hair wash to cleanse and leave your hair feeling fresh and renewed.",
-        price: "CAD $5",
-        duration: "5-10 minutes",
-        image: "/images/services/shampoo.jpg",
-    },
+    // {
+    //     name: "Shampoo",
+    //     description:
+    //         "A refreshing hair wash to cleanse and leave your hair feeling fresh and renewed.",
+    //     price: "CAD $5",
+    //     duration: "5-10 minutes",
+    //     image: "/images/services/shampoo.jpg",
+    // },
     {
         name: "Kids Haircut",
         description:
