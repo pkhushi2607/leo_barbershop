@@ -11,7 +11,7 @@ export const galleryItems: GalleryItem[] = [
         className: "md:col-span-7 md:row-span-2",
     },
     {
-        src: "/images/gallery-shave.jpg",
+        src: "/images/child-haircut.jpeg",
         alt: "Traditional hot towel shave and precision grooming",
         className: "md:col-span-5",
     },
@@ -26,7 +26,7 @@ export const galleryItems: GalleryItem[] = [
         className: "md:col-span-4",
     },
     {
-        src: "/images/gallery-grooming.jpg",
+        src: "/images/gallery-grooming.jpeg",
         alt: "Precision beard grooming and detailing at Leo's Barber Shop",
         className: "md:col-span-3",
     },

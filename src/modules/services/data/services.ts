@@ -9,7 +9,7 @@ export type Service = {
 
 export const services: Service[] = [
     {
-        name: "Haircut",
+        name: "Regular Haircut",
         description:
             "A clean, personalized haircut tailored to your style and finished with precision.",
         price: "CAD $20",
@@ -96,7 +96,7 @@ export const services: Service[] = [
         name: "Kids Haircut",
         description:
             "A clean, comfortable haircut with attention to detail for younger clients.",
-        price: "CAD $15",
+        price: "CAD $20",
         duration: "15-20 minutes",
         image: "/images/services/kids_haircut.jpg",
         bookLink: "https://leosbarbershopwindsor.setmore.com/book?step=time-slot&products=f0f1204b-445b-4066-8015-db4fddc4e6db&type=service&staff=71a89899-07c8-438b-804e-e0ee8f1d612b&staffSelected=true"

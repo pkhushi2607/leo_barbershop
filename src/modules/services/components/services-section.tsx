@@ -1,7 +1,7 @@
 import { services } from "../data/services";
 
 const icons: Record<string, string> = {
-    Haircut: "💈", "Haircut Zero Fade": "💈", "Hair Colour": "🎨",
+    "Regular Haircut": "💈", "Haircut Zero Fade": "💈", "Hair Colour": "🎨",
     "Beard Trim & Line Up": "✂️", "Beard Colour": "🎨", Wax: "♨️",
     Threading: "✂️", "Full Service": "🔥💯", Facial: "♨️", Shampoo: "🫧", "Kids Haircut": "👦",
 };
